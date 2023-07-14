@@ -7,7 +7,7 @@ import Yesod.Core
 
 getHomeR :: Handler Html
 getHomeR = defaultLayout $ do
-    setTitle "Minimal Multifile"
+    setTitle "Bayside Medical"
     toWidget [lucius|
            @import url('https://fonts.googleapis.com/css?family=Open+Sans');
            @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
@@ -56,10 +56,11 @@ getHomeR = defaultLayout $ do
            html, body{ width:100%; height:100%;}
     |]
     [whamlet|
+         <script src="https://kit.fontawesome.com/59b096c1bd.js" crossorigin="anonymous"> 
          <div class="bg-image"> 
-         <h1> Bayside Medical Practice of Vilano Beach, LLC;
+         <h1> Bayside Medical Practice of Vilano Beach, LLC
               <p style="padding-top:30px;"> Primary practice headed by Tammy Dye.
               <p> Contact us: tammydye@baysidemedical.net
               <p> Coming soon to 101 Yacht Club Drive, St Augustine FL, 32084
-            
+              <i class="fa-solid fa-circle-nodes fa-spin" style="color: #d1edfe;"></i>
     |]
