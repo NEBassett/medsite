@@ -10,25 +10,56 @@ getHomeR = defaultLayout $ do
     setTitle "Minimal Multifile"
     toWidget [lucius|
            @import url('https://fonts.googleapis.com/css?family=Open+Sans');
+           @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300&display=swap');
            
+           .bg-image {
+               /* The image used */
+               background-image: url("https://cdn.discordapp.com/attachments/1004853212022587514/1129238834253668392/dhh.png");
+               
+               /* Add the blur effect */
+               filter: blur(8px);
+               -webkit-filter: blur(8px);
+               
+               /* Full height */
+               height: 100%;
+               
+               /* Center and scale the image nicely */
+               background-position: center;
+               background-repeat: no-repeat;
+               background-size: cover;
+           }
+
            h1 {
-               font-family: "Open Sans", sans-serif;
-               font-size: 14px;
+               color: white; 
+               font-family: 'Roboto Condensed', sans-serif;
+               font-size: 50px;
                text-align: center;
                position: fixed;
                top: 50%;
                left: 50%;
                transform: translate(-50%, -50%);
+               z-index: 2;
+               text-shadow: 2px 2px 2px rgba(30,30,30,0.32);
            }
            
            p {
-               font-family: "Open Sans", sans-serif;
+               color:rgb(210,228,242);
+               font-family: 'Roboto Condensed', sans-serif;
                text-align: center;
-               font-size: 12px;
+               font-size: 33px;
+               z-index: 2;
+               text-shadow: 2px 2px 2px rgba(30,30,30,0.32);
+               margin: 5px;
+               
            }
+           
+           html, body{ width:100%; height:100%;}
     |]
     [whamlet|
-        <h1> Bayside Medical Practice of Vilano Beach, LLC;
-            <p> Primary practice headed by Tammy Dye. Contact us: tammydye@baysidemedical.net
-            <p> Coming soon to 101 Yacht Club Drive, St Augustine FL, 32084
+         <div class="bg-image"> 
+         <h1> Bayside Medical Practice of Vilano Beach, LLC;
+              <p style="padding-top:30px;"> Primary practice headed by Tammy Dye.
+              <p> Contact us: tammydye@baysidemedical.net
+              <p> Coming soon to 101 Yacht Club Drive, St Augustine FL, 32084
+            
     |]
