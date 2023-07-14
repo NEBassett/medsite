@@ -64,7 +64,7 @@ getHomeR = defaultLayout $ do
          <div class="bg-image"> 
          <h1> Bayside Medical Practice of Vilano Beach, LLC
               <p style="padding-top:30px;"> Primary practice headed by Tammy Dye.
-              <p> Contact us: <highlight>tammydye@baysidemedical.net
+              <p> Contact us: <highlight>tammydye@baysidemedical.net</highlight>
               <p> Coming soon to 101 Yacht Club Drive, St Augustine FL, 32084
               <i class="fa-solid fa-circle-nodes fa-spin" style="color: #d1edfe;"></i>
     |]
