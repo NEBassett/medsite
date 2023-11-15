@@ -4,6 +4,11 @@ version: "0.0.0"
 dependencies:
 - base
 - yesod-core
+- shakespeare
+- blaze-html
+- template-haskell
+- yesod
+- yesod-static
 
 # The library contains all of our application code. The executable
 # defined below is just a thin wrapper.

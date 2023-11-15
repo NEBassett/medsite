@@ -4,9 +4,14 @@
 {-# LANGUAGE ViewPatterns      #-}
 module Foundation where
 
+import           Language.Haskell.TH.Quote (QuasiQuoter, quoteFile)
+import           Text.Shakespeare.Text     (st)
 import Yesod.Core
+import Yesod.Static
 
-data App = App
+data App = App {getStatic :: Static}
+
+staticFiles "static"
 
 mkYesodData "App" $(parseRoutesFile "routes.yesodroutes")
 
