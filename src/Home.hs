@@ -22,6 +22,12 @@ import Text.Lucius (CssUrl, luciusFile, luciusFileReload, renderCss, ToCss)
 import           Language.Haskell.TH.Quote (QuasiQuoter, quoteFile)
 import           Text.Shakespeare.Text     (st)
 
+getHomeR :: Handler Html
+getHomeR = defaultLayout $ do
+    app <- getYesod
+    let indexPath = "static/index-2.html"
+    sendFile "text/html" indexPath
+
 --staticFiles "static"
 
 --myWidget = toWidget . preEscapedToHtml $ [stFile|index.html|]
